@@ -187,7 +187,7 @@ O Amazon S3 (Simple Storage Service) é um serviço de armazenamento em nuvem al
 Seguindo estas etapas, você poderá testar e verificar a funcionalidade do Amazon S3 para garantir que ele atenda às suas necessidades de armazenamento e acessibilidade.
 
 
-# Como Testar as Filas do SQS na AWS
+# Testar as Filas do SQS 
 
 O Amazon Simple Queue Service (SQS) é um serviço de filas de mensagens que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicações serverless. Testar as filas do SQS é uma parte essencial do desenvolvimento de sistemas que utilizam esse serviço. A seguir, apresentamos um guia sobre como realizar testes nas filas do SQS na AWS.
 
