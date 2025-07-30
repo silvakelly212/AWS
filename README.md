@@ -119,3 +119,69 @@ report.html
 ## Conclusão
 
 Automatizar tarefas na AWS com o Robot Framework é uma maneira poderosa de gerenciar recursos de forma eficiente. Com este guia, você estará preparado para criar scripts personalizados que se adequem às suas necessidades particulares de automação na nuvem.
+
+
+# Teste do Buckets S3 na AWS
+
+O Amazon S3 (Simple Storage Service) é um serviço de armazenamento em nuvem altamente escalável, oferecido pela Amazon Web Services (AWS). Testar um Bucket S3 envolve criar um bucket, realizar operações básicas de upload e download, e configurar permissões e políticas. Abaixo está um guia passo a passo para ajudá-lo a testar o Buckets S3 na AWS.
+
+## Criando um Bucket S3
+
+1. **Acessar o Console AWS:**
+   - Faça login na sua conta AWS e navegue até o console do Amazon S3.
+
+2. **Criar um Novo Bucket:**
+   - Clique em "Create bucket".
+   - Insira um nome único para o bucket.
+   - Escolha a região onde o bucket será armazenado. É importante escolher a região mais próxima dos seus usuários para otimizar a latência.
+   - Configure as opções adicionais conforme necessário, como controle de versão e criptografia.
+   - Clique em "Create bucket" para finalizar.
+
+## Realizando Operações Básicas
+
+### Upload de Arquivos
+
+1. **Acessar o Bucket:**
+   - No console do S3, clique no nome do bucket que você criou.
+
+2. **Fazer Upload de um Arquivo:**
+   - Clique no botão "Upload".
+   - Arraste e solte os arquivos que deseja enviar ou clique em "Add files" para selecionar os arquivos do seu computador.
+   - Clique em "Upload" para começar o envio.
+
+### Download de Arquivos
+
+1. **Selecionar o Arquivo:**
+   - Navegue até o bucket e selecione o arquivo que deseja baixar.
+
+2. **Baixar o Arquivo:**
+   - Clique no botão "Download" para iniciar o download do arquivo para o seu computador.
+
+## Configurando Permissões e Políticas
+
+### Gerenciar Permissões do Bucket
+
+1. **Acessar a Aba de Permissões:**
+   - No bucket, clique em "Permissions".
+
+2. **Configurar Permissões:**
+   - Gerencie as permissões do bucket para controlar o acesso aos dados. Você pode adicionar políticas de bucket personalizadas para conceder ou restringir o acesso.
+
+### Configurar Políticas de Bucket
+
+1. **Adicionar uma Política de Bucket:**
+   - Na aba "Permissions", clique em "Bucket Policy".
+   - Insira uma política JSON para definir as permissões de acesso. Por exemplo, você pode permitir que todos os usuários da AWS tenham acesso de leitura ao bucket.
+
+2. **Salvar as Alterações:**
+   - Após inserir a política desejada, clique em "Save" para aplicar as alterações.
+
+## Monitoramento e Testes Adicionais
+
+- **Configurar Logs de Acesso:**
+  - Habilite o logging de acesso para monitorar as solicitações feitas ao seu bucket.
+
+- **Testar o Acesso:**
+  - Use o AWS CLI ou SDKs para realizar operações de teste, como upload e download programáticos, para verificar se as permissões estão configuradas corretamente.
+
+Seguindo estas etapas, você poderá testar e verificar a funcionalidade do Amazon S3 para garantir que ele atenda às suas necessidades de armazenamento e acessibilidade.
