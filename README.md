@@ -120,80 +120,33 @@ report.html
 ## Conclusão
 
 Automatizar tarefas na AWS com o Robot Framework é uma maneira poderosa de gerenciar recursos de forma eficiente. Com este guia, você estará preparado para criar scripts personalizados que se adequem às suas necessidades particulares de automação na nuvem.
-# Como Testar as Filas do SQS na AWS
 
-O Amazon Simple Queue Service (SQS) é um serviço de filas de mensagens que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicações serverless. Testar as filas do SQS é uma parte essencial do desenvolvimento de sistemas que utilizam esse serviço. A seguir, apresentamos um guia sobre como realizar testes nas filas do SQS na AWS.
-
-## Pré-requisitos
-
-Antes de começar, certifique-se de que possui:
-
-- Uma conta ativa na AWS.
-- Configuração do AWS CLI em seu ambiente local.
-- Permissões adequadas para acessar e manipular filas do SQS.
-
-## Criando uma Fila SQS
-
-1. **Acessar o Console AWS**: Entre no console da AWS e navegue até o serviço SQS.
-2. **Criar uma nova fila**:
-   - Clique em "Criar fila".
-   - Escolha o tipo de fila (Standard ou FIFO).
-   - Configure as opções da fila, como nome e tempo de visibilidade.
-   - Clique em "Criar fila".
-
-## Enviando Mensagens para a Fila
-
-Para testar, você precisa enviar mensagens para a fila criada. Isso pode ser feito de várias maneiras:
-
-### Usando o Console da AWS
-
-1. Selecione a fila que você criou.
-2. Clique em "Enviar e receber mensagens".
-3. Insira uma mensagem no campo fornecido.
-4. Clique em "Enviar mensagem".
-
-### Usando o AWS CLI
-
-```bash
-aws sqs send-message --queue-url <URL_DA_SUA_FILA> --message-body "Mensagem de teste"
-```
-
-Substitua `<URL_DA_SUA_FILA>` pela URL da fila que você deseja testar.
-
-## Recebendo Mensagens da Fila
-
-### Usando o Console da AWS
-
-1. Na mesma seção onde enviou mensagens, clique em "Receber mensagem".
-2. As mensagens disponíveis serão exibidas.
-
-### Usando o AWS CLI
-
-```bash
-aws sqs receive-message --queue-url <URL_DA_SUA_FILA>
-```
-
-Isso retornará mensagens atualmente disponíveis na fila.
-
-## Excluindo Mensagens
-
-Após processar as mensagens, é importante excluí-las para evitar processamento duplicado.
-
-### Usando o AWS CLI
-
-```bash
-aws sqs delete-message --queue-url <URL_DA_SUA_FILA> --receipt-handle <RECEIPT_HANDLE>
-```
-
-Substitua `<RECEIPT_HANDLE>` pelo identificador de recebimento da mensagem.
-
-## Considerações Finais
-
-- **Testes Automatizados**: Considere usar frameworks de teste para automatizar esses processos em seus pipelines de CI/CD.
-- **Monitoramento e Logs**: Ative o CloudWatch para monitorar e registrar a atividade das filas.
-- **Permissões**: Assegure-se de que as credenciais usadas possuam as permissões necessárias para todas as operações SQS executadas.
-
-Testar corretamente as filas do SQS é um passo crucial para garantir que seu sistema de mensagens funcione de forma eficaz e confiável. Cumprindo esses passos, você poderá validar e depurar suas filas SQS de maneira eficiente.
+Testes de Software na AWS
+Os testes de software são uma etapa crucial no desenvolvimento de aplicações. Quando se trata de executar testes na nuvem, a Amazon Web Services (AWS) oferece uma ampla gama de ferramentas e serviços para facilitar esse processo. Este documento fornece uma visão geral de como realizar testes de software na AWS, destacando os principais serviços e práticas recomendadas.
+Introdução à AWS para Testes de Software
+A AWS oferece uma infraestrutura escalável e flexível que pode ser utilizada para uma variedade de tipos de testes, incluindo testes de unidade, integração, carga e segurança. Com a AWS, as equipes de desenvolvimento podem criar ambientes de teste que imitam a produção, testar novas funcionalidades de forma segura e garantir que o software funcione conforme esperado antes de ser implementado.
+Serviços da AWS para Testes
+AWS Elastic Beanstalk
+O AWS Elastic Beanstalk é uma plataforma como serviço (PaaS) que facilita o teste de aplicações web. Ele permite que os desenvolvedores façam o upload de seu código e o Elastic Beanstalk cuida automaticamente da implementação, desde o provisionamento de capacidade, balanceamento de carga, escalabilidade automática até o monitoramento da integridade do aplicativo.
+AWS CloudFormation
+O AWS CloudFormation permite que você modele e configure seus recursos da AWS para que você possa passar mais tempo se concentrando nos aplicativos que deseja construir. Usando modelos de CloudFormation, você pode criar ambientes de teste consistentes e reproduzíveis.
+AWS Lambda
+O AWS Lambda permite executar código sem provisionar ou gerenciar servidores. Isso é útil para testes de unidade e integração, onde você deseja desencadear funções em resposta a eventos e validar os resultados sem preocupar-se com a infraestrutura subjacente.
+Tipos de Testes na AWS
+Testes de Unidade
+Os testes de unidade são fundamentais para garantir que cada componente individual do software funcione corretamente. Utilizar o AWS Lambda para executar testes de unidade é eficiente, pois permite a execução de testes em resposta a eventos específicos.
+Testes de Integração
+Os testes de integração verificam a interação entre diferentes módulos ou sistemas. Com o uso de AWS Step Functions, você pode orquestrar a execução de múltiplas funções Lambda e verificar a integração entre elas.
+Testes de Carga
+Os testes de carga são essenciais para garantir que o aplicativo possa lidar com um grande número de usuários simultâneos. Serviços como o AWS Auto Scaling e o Amazon CloudWatch são úteis para monitorar o desempenho do aplicativo sob carga.
+Testes de Segurança
+A segurança é uma preocupação primordial em qualquer aplicativo. A AWS oferece o AWS Inspector, que avalia automaticamente aplicativos quanto a vulnerabilidades ou desvios das melhores práticas.
+Práticas Recomendadas
+Automatização dos Testes: Utilize ferramentas de CI/CD como AWS CodePipeline para automatizar o processo de teste e garantir que cada alteração de código seja testada antes de ser implantada.
+Ambientes Isolados: Crie ambientes de teste isolados usando AWS VPC para garantir que os testes não interfiram em ambientes de produção.
+Monitoramento Contínuo: Utilize o Amazon CloudWatch para monitorar continuamente os recursos e receber alertas em tempo real sobre falhas ou problemas de desempenho.
+Conclusão
+A AWS oferece uma infraestrutura robusta e serviços variados que facilitam a execução de testes de software de maneira eficiente e segura. Ao adotar as práticas e serviços discutidos neste documento, as equipes de desenvolvimento podem melhorar significativamente a qualidade e a confiabilidade de suas aplicações.
 
 
 # Teste do Buckets S3 na AWS
