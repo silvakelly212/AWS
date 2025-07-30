@@ -185,3 +185,79 @@ O Amazon S3 (Simple Storage Service) é um serviço de armazenamento em nuvem al
   - Use o AWS CLI ou SDKs para realizar operações de teste, como upload e download programáticos, para verificar se as permissões estão configuradas corretamente.
 
 Seguindo estas etapas, você poderá testar e verificar a funcionalidade do Amazon S3 para garantir que ele atenda às suas necessidades de armazenamento e acessibilidade.
+
+
+# Como Testar as Filas do SQS na AWS
+
+O Amazon Simple Queue Service (SQS) é um serviço de filas de mensagens que permite o desacoplamento e a escalabilidade de microsserviços, sistemas distribuídos e aplicações serverless. Testar as filas do SQS é uma parte essencial do desenvolvimento de sistemas que utilizam esse serviço. A seguir, apresentamos um guia sobre como realizar testes nas filas do SQS na AWS.
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de que possui:
+
+- Uma conta ativa na AWS.
+- Configuração do AWS CLI em seu ambiente local.
+- Permissões adequadas para acessar e manipular filas do SQS.
+
+## Criando uma Fila SQS
+
+1. **Acessar o Console AWS**: Entre no console da AWS e navegue até o serviço SQS.
+2. **Criar uma nova fila**:
+   - Clique em "Criar fila".
+   - Escolha o tipo de fila (Standard ou FIFO).
+   - Configure as opções da fila, como nome e tempo de visibilidade.
+   - Clique em "Criar fila".
+
+## Enviando Mensagens para a Fila
+
+Para testar, você precisa enviar mensagens para a fila criada. Isso pode ser feito de várias maneiras:
+
+### Usando o Console da AWS
+
+1. Selecione a fila que você criou.
+2. Clique em "Enviar e receber mensagens".
+3. Insira uma mensagem no campo fornecido.
+4. Clique em "Enviar mensagem".
+
+### Usando o AWS CLI
+
+```bash
+aws sqs send-message --queue-url <URL_DA_SUA_FILA> --message-body "Mensagem de teste"
+```
+
+Substitua `<URL_DA_SUA_FILA>` pela URL da fila que você deseja testar.
+
+## Recebendo Mensagens da Fila
+
+### Usando o Console da AWS
+
+1. Na mesma seção onde enviou mensagens, clique em "Receber mensagem".
+2. As mensagens disponíveis serão exibidas.
+
+### Usando o AWS CLI
+
+```bash
+aws sqs receive-message --queue-url <URL_DA_SUA_FILA>
+```
+
+Isso retornará mensagens atualmente disponíveis na fila.
+
+## Excluindo Mensagens
+
+Após processar as mensagens, é importante excluí-las para evitar processamento duplicado.
+
+### Usando o AWS CLI
+
+```bash
+aws sqs delete-message --queue-url <URL_DA_SUA_FILA> --receipt-handle <RECEIPT_HANDLE>
+```
+
+Substitua `<RECEIPT_HANDLE>` pelo identificador de recebimento da mensagem.
+
+## Considerações Finais
+
+- **Testes Automatizados**: Considere usar frameworks de teste para automatizar esses processos em seus pipelines de CI/CD.
+- **Monitoramento e Logs**: Ative o CloudWatch para monitorar e registrar a atividade das filas.
+- **Permissões**: Assegure-se de que as credenciais usadas possuam as permissões necessárias para todas as operações SQS executadas.
+
+Testar corretamente as filas do SQS é um passo crucial para garantir que seu sistema de mensagens funcione de forma eficaz e confiável. Cumprindo esses passos, você poderá validar e depurar suas filas SQS de maneira eficiente.
