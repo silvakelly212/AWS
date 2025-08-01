@@ -27,6 +27,8 @@ Para instalar o Robot Framework, use o seguinte comando pip em seu terminal:
 pip install robotframework
 ```
 ### 1. Configurar o plugin Robot Framework
+- Clicar no botão de Configurações do plugin > Extension Settings
+- Selecionar Robot Framework (Language Server)
 
 <img width="703" height="897" alt="Screen Shot 2025-08-01 at 10 46 28" src="https://github.com/user-attachments/assets/83eee76d-0a15-461e-9546-d48205685377" />
 
