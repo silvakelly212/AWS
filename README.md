@@ -28,13 +28,7 @@ pip install robotframework
 ```
 
 ### 2. Configurar o plugin Robot Framework VSCode
-## Pré-requisito
-- Estrutura de pasta (Projeto) - basico
-- .github \app \infra \tests \integration-tests
-- Estrutura de pasta (Testes)
-- .github \app \infra \tests \integration-tests \api \docs \scripts \steps \tests
-  ```dentro da pasta tests deve conter os testes.robot e os arquivos de logs como log.html output.xml e report.html```
-  
+
 - Clicar no botão de Configurações do plugin > Extension Settings
 - Selecionar ```Robot Framework (Language Server)```
 
@@ -55,9 +49,10 @@ pip install robotframework
   
 <img width="1163" height="544" alt="Screen Shot 2025-08-01 at 11 50 26" src="https://github.com/user-attachments/assets/03f1ea2c-d4b6-4fa2-88bb-55ed036f384e" />
 
+## Finalizar
+- Após a configuração salvar e fechar os arquivos e renicie o VSCode
 
-
-### 2. Instalar Bibliotecas Necessárias
+### 5. Instalar Bibliotecas Necessárias
 
 Além do Robot Framework, você precisará instalar bibliotecas específicas para interagir com a AWS. Uma das bibliotecas mais utilizadas é a `robotframework-requests` para fazer chamadas HTTP.
 
@@ -80,6 +75,22 @@ aws configure
 ```
 
 Você será solicitado a inserir suas credenciais de acesso, região padrão e formato de saída.
+
+### 4. Estrutura de Projeto
+
+## Pré-requisito
+- Estrutura de pasta (Projeto) - basico
+- .github \app \infra \tests \integration-tests
+- Estrutura de pasta (Testes)
+- .github \app \infra \tests \integration-tests \api \docs \scripts \steps \tests
+  ```dentro da pasta tests deve conter os testes.robot e os arquivos de logs como log.html output.xml e report.html```
+  
+## Construção  
+- api    # Diretório de arquivos para mapeamento dos contratatos (APIs)
+- scripts   #Diretório de arquivos reponsável por mocks externos
+- setups    #Diretório de arquivos responsável pela configuração dos serviços (DynamoDB, API Gateway, etc) utlizados
+- tests     #Suítes de testes com as especificações em BDD
+
 
 ### 4. Criar o Arquivo de Teste do Robot Framework
 
