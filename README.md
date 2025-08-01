@@ -28,7 +28,13 @@ pip install robotframework
 ```
 
 ### 2. Configurar o plugin Robot Framework VSCode
-
+## Pré-requisito
+- Estrutura de pasta (Projeto) - basico
+- .github \app \infra \tests \integration-tests
+- Estrutura de pasta (Testes)
+- .github \app \infra \tests \integration-tests \api \docs \scripts \steps \tests
+  ```dentro da pasta tests deve conter os testes.robot e os arquivos de logs como log.html output.xml e report.html```
+  
 - Clicar no botão de Configurações do plugin > Extension Settings
 - Selecionar ```Robot Framework (Language Server)```
 
