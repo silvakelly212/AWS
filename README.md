@@ -26,7 +26,9 @@ Para instalar o Robot Framework, use o seguinte comando pip em seu terminal:
 ```bash
 pip install robotframework
 ```
-### 2. Configurar o plugin Robot Framework
+
+### 2. Configurar o plugin Robot Framework VSCode
+
 - Clicar no botão de Configurações do plugin > Extension Settings
 - Selecionar ```Robot Framework (Language Server)```
 
