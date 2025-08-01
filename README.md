@@ -39,6 +39,14 @@ pip install robotframework
   
   <img width="1236" height="874" alt="Screen Shot 2025-08-01 at 11 39 12" src="https://github.com/user-attachments/assets/f361b439-afdc-4fe7-a97b-8ee8dff04bac" />
 
+### 4. Configurar o plugin Idioma pt-BR
+- Na tela de configuração do plugin, procure pelo campo Robot: ```Language```
+- Clicar no botão ```Edit in settings.json```
+- Adicionar a propriedade abaixo no sttings.json
+  "robot.language":["pt-BR"]
+  
+<img width="1236" height="874" alt="Screen Shot 2025-08-01 at 11 39 12" src="https://github.com/user-attachments/assets/ed58464a-f985-48fe-8dcd-aa8c89f5713e" />
+
 
 ### 2. Instalar Bibliotecas Necessárias
 
