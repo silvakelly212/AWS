@@ -66,7 +66,7 @@ Para interagir diretamente com AWS, você pode usar a biblioteca `Boto3`, a qual
 pip install boto3
 ```
 
-### 3. Configurar a AWS CLI
+### 6. Configurar a AWS CLI
 
 Certifique-se de ter configurado a AWS CLI com suas credenciais de usuário, usando o seguinte comando:
 
@@ -76,7 +76,7 @@ aws configure
 
 Você será solicitado a inserir suas credenciais de acesso, região padrão e formato de saída.
 
-### 4. Estrutura de Projeto
+### 7. Estrutura de Projeto
 
 ## Pré-requisito
 - Estrutura de pasta (Projeto) - basico
@@ -92,7 +92,7 @@ Você será solicitado a inserir suas credenciais de acesso, região padrão e f
 - tests     #Suítes de testes com as especificações em BDD
 
 
-### 4. Criar o Arquivo de Teste do Robot Framework
+### 8. Criar o Arquivo de Teste do Robot Framework
 
 Crie um arquivo de teste com extensão `.robot`. Por exemplo, `aws_automation.robot`.
 
@@ -138,7 +138,7 @@ Should Be Equal As Strings ${response.status_code} 200
 
 ```
 
-### 5. Executar o Script de Automação
+### 9. Executar o Script de Automação
 
 No terminal, execute o script do Robot Framework usando o seguinte comando:
 
@@ -148,7 +148,7 @@ robot aws_automation.robot
 
 Este comando executará o arquivo de teste, que interage com a AWS para realizar a automação especificada.
 
-### 6. Verificar Resultados
+### 10. Verificar Resultados
 
 Após a execução, o Robot Framework gera relatórios e logs que podem ser usados para revisar os resultados dos testes e identificar quaisquer problemas.
 
@@ -158,7 +158,7 @@ log.html
 report.html
 ```
 
-## Conclusão
+### Testes Manuais 
 
 
 # Teste do Buckets S3 na AWS
