@@ -36,6 +36,9 @@ pip install robotframework
 - Na tela de configurações do plugin, adicionar o path do executável do python no campo ```Robot > Languagem-server: Python```
 - Atenção selecione o executável do python que esta na pasta (do projeto)
 - Exemplo: ```c:\User\user\VSCodeProjects\projeto-robotframework-aws\venv\Script\python.exe```
+  
+  <img width="1236" height="874" alt="Screen Shot 2025-08-01 at 11 39 12" src="https://github.com/user-attachments/assets/f361b439-afdc-4fe7-a97b-8ee8dff04bac" />
+
 
 ### 2. Instalar Bibliotecas Necessárias
 
