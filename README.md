@@ -61,6 +61,8 @@ pip install robotframework-requests
 ```
 
 Para interagir diretamente com AWS, você pode usar a biblioteca `Boto3`, a qual permite acesso programático aos serviços AWS.
+## Documentação Boto3 
+(https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
 
 ```bash
 pip install boto3
